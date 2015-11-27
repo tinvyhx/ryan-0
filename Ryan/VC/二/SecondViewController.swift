@@ -11,8 +11,7 @@ import UIKit
 class SecondViewController: WebViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.tabBarItem.title = "我的订单"
-        self.tabBarItem.image = UIImage(named: "first")
+        self.tabBarItem=UITabBarItem(title: "我的订单", image: UIImage(named: "tab_2"), selectedImage: UIImage(named: "tab_2_selected"))
     }
     
     required init?(coder aDecoder: NSCoder) {

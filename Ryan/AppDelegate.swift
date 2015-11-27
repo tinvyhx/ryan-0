@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var tabBarController: UITabBarController!
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        UMSocialData.setAppKey(UMeng_KEY)
+        UMSocialData.openLog(true)
+        
         tabBarController = UITabBarController()
         tabBarController.viewControllers = [FirstViewController(),SecondViewController(),ThirdViewController(),FourthViewController()]
         

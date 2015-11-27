@@ -8,7 +8,7 @@
 
 import Foundation
 
-let APP_Http = "http://51dianchu.com/"
+let APP_Http = "http://51dianchu.com"
 
 //首页抢单
 let Home_Page = "/OD/hcook_order_waitrob_list.htm"

@@ -12,8 +12,7 @@ class FirstViewController: WebViewController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.tabBarItem.title = "抢单"
-        self.tabBarItem.image = UIImage(named: "first")
+        self.tabBarItem=UITabBarItem(title: "抢单", image: UIImage(named: "tab_1"), selectedImage: UIImage(named: "tab_1_selected"))
     }
 
     required init?(coder aDecoder: NSCoder) {

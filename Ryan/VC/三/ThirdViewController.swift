@@ -12,8 +12,7 @@ class ThirdViewController: WebViewController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.tabBarItem.title = "个人中心"
-        self.tabBarItem.image = UIImage(named: "first")
+        self.tabBarItem=UITabBarItem(title: "我的订单", image: UIImage(named: "tab_3"), selectedImage: UIImage(named: "tab_3_selected"))
     }
     
     required init?(coder aDecoder: NSCoder) {
