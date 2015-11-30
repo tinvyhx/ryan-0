@@ -17,8 +17,23 @@ class WebViewController: BaseViewController , UIWebViewDelegate {
         web_view = UIWebView(frame: self.view.frame)
         web_view.scalesPageToFit = true
         self.view = web_view
+        
+        web_view.scrollView.mj_header = MJRefreshNormalHeader(refreshingBlock: {() in
+            self.web_view.reload()
+        })
     }
-
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        web_view.scrollView.mj_header.endRefreshing()
+    }
+    /*!
+    - parameter animated:
+    */
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
+        self.view.frame=CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-20)
+    }
+    
     func loadWeb(){
         web_address = APP_Http + web_address
         web_view.loadRequest(NSURLRequest(URL: NSURL(string: web_address)!))
