@@ -21,16 +21,14 @@ class WebViewController: BaseViewController , UIWebViewDelegate {
         web_view.scrollView.mj_header = MJRefreshNormalHeader(refreshingBlock: {() in
             self.web_view.reload()
         })
+        print(App_Version)
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
         web_view.scrollView.mj_header.endRefreshing()
     }
-    /*!
-    - parameter animated:
-    */
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(false)
+    
+    override func viewWillAppear(animated: Bool) {
         self.view.frame=CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-20)
     }
     

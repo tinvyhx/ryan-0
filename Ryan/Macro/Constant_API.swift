@@ -20,3 +20,8 @@ let My_Order = "/OD/hcook_list_order.htm"
 let Personal_Center = "/OD/hcook_user.htm"
 
 let More_Share = "/OD/cook_tologin.htm"
+
+
+let App_Version = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"]!
+
+let Api_Version = "1.0.0"
