@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FourthViewController: BaseViewController,UMSocialUIDelegate {
+class FourthViewController: BaseViewController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,15 +25,9 @@ class FourthViewController: BaseViewController,UMSocialUIDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        UMSocialSnsService.presentSnsController(self, appKey: UMeng_KEY, shareText: "hello", shareImage: UIImage(named: "tab_1"), shareToSnsNames: [UMShareToSms,UMShareToEmail], delegate: self)
+        UMSocialSnsService.presentSnsController(self, appKey: UMeng_KEY, shareText: "分享点东西", shareImage: UIImage(named: "AppIcon"), shareToSnsNames: [UMShareToSms,UMShareToEmail,UMShareToQQ,UMShareToQzone,UMShareToWechatSession,UMShareToWechatTimeline], delegate: nil)
         
         self.tabBarController?.selectedIndex=0
-    }
-    
-    //MARK: UMeng
-
-    func didCloseUIViewController(fromViewControllerType: UMSViewControllerType) {
-        
     }
     
     //MARK: Life
